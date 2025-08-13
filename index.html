@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COOLIE - Your Job Station</title>
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Find daily wage work opportunities in your city">
+    <meta name="keywords" content="jobs, daily wage, coolie, work, employment">
 </head>
 <body>
     <!-- Splash Screen -->
@@ -21,136 +24,562 @@
         </div>
     </div>
 
+    <!-- Landing Page -->
+    <div id="landing-screen" class="screen">
+        <div class="landing-content">
+            <div class="landing-hero">
+                <div class="hero-image-container">
+                    <img src="https://images.pexels.com/photos/2097617/pexels-photo-2097617.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750" 
+                         alt="Construction workers collaborating" 
+                         class="hero-image" 
+                         loading="eager"
+                         crossorigin="anonymous">
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Find Work.<br>Get Paid.</h1>
+                    <p class="hero-subtitle">Connect with employers in your city and find daily wage opportunities that match your skills.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Active Workers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Daily Jobs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">₹800</div>
+                            <div class="stat-label">Avg. Daily Pay</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h2 class="section-title">Why Choose COOLIE?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://images.pexels.com/photos/4254168/pexels-photo-4254168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" 
+                                 alt="Reliable construction workers" 
+                                 class="feature-image"
+                                 loading="lazy"
+                                 crossorigin="anonymous">
+                        </div>
+                        <h3>Reliable Labour</h3>
+                        <p>From construction to delivery, cleaning to painting - find work that matches your expertise.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" 
+                                 alt="Transparent payment system" 
+                                 class="feature-image"
+                                 loading="lazy"
+                                 crossorigin="anonymous">
+                        </div>
+                        <h3>Transparent Pay</h3>
+                        <p>Get paid quickly through UPI after completing your work. Track your earnings daily.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://images.pexels.com/photos/4391478/pexels-photo-4391478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" 
+                                 alt="Fast booking mobile app" 
+                                 class="feature-image"
+                                 loading="lazy"
+                                 crossorigin="anonymous">
+                        </div>
+                        <h3>Fast Booking</h3>
+                        <p>Apply to jobs with just one tap. No complicated forms or lengthy processes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of workers already earning with COOLIE</p>
+                <button type="button" class="cta-button glass-button primary" id="get-started-btn" aria-label="Get started with COOLIE">
+                    <i class="fas fa-rocket"></i>
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Home Screen -->
     <div id="home-screen" class="screen">
         <div class="glass-header">
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2 class="greeting" id="greeting-text">Vanakkam, Karthik!</h2>
+            <button class="menu-btn" data-screen="settings-screen" aria-label="Open settings">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
         </div>
         
         <div class="container">
+            <div class="quick-stats">
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fas fa-rupee-sign"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-value">₹500</div>
+                        <div class="stat-label">Today's Earnings</div>
+                    </div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-value">23</div>
+                        <div class="stat-label">Jobs Completed</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="action-grid">
-                <button class="glass-card action-button" data-screen="find-work-screen">
+                <button class="glass-card action-button" data-screen="find-work-screen" aria-label="Find work opportunities">
                     <i class="fas fa-briefcase"></i>
                     <span id="find-work-text">Find Work</span>
                 </button>
-                <button class="glass-card action-button" data-screen="post-job-screen">
+                <button class="glass-card action-button" data-screen="post-job-screen" aria-label="Post a job">
                     <i class="fas fa-plus-square"></i>
                     <span id="post-job-text">Post a Job</span>
                 </button>
-                <button class="glass-card action-button" data-screen="my-jobs-screen">
+                <button class="glass-card action-button" data-screen="my-jobs-screen" aria-label="View my jobs">
                     <i class="fas fa-clipboard-list"></i>
                     <span id="my-jobs-text">My Jobs</span>
                 </button>
-                <button class="glass-card action-button" data-screen="profile-screen">
+                <button class="glass-card action-button" data-screen="profile-screen" aria-label="View profile">
                     <i class="fas fa-user"></i>
                     <span id="profile-text">My Profile</span>
                 </button>
-                <button class="glass-card action-button" data-screen="wallet-screen">
+                <button class="glass-card action-button" data-screen="wallet-screen" aria-label="View wallet">
                     <i class="fas fa-wallet"></i>
                     <span id="wallet-text">Wallet</span>
                 </button>
-                <button class="glass-card action-button" data-screen="language-screen">
+                <button class="glass-card action-button" data-screen="language-screen" aria-label="Change language">
                     <i class="fas fa-globe"></i>
                     <span>Change Language</span>
                 </button>
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item active" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Find Work Screen -->
     <div id="find-work-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>Find Work</h2>
         </div>
         
         <div class="container">
             <div class="glass-search">
-                <input type="text" id="job-search" placeholder="Search jobs..." class="search-input">
+                <input type="text" id="job-search" placeholder="Search jobs..." class="search-input" aria-label="Search for jobs">
                 <i class="fas fa-search search-icon"></i>
             </div>
             
-            <div class="jobs-list" id="jobs-list">
-                <!-- Jobs will be populated by JavaScript -->
+            <div class="jobs-list" id="jobs-list" role="list" aria-label="Available jobs">
+                <!-- Skeleton loaders will be shown initially -->
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item active" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen">
+        <div class="glass-header">
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <h2>Settings</h2>
+        </div>
+        
+        <div class="container">
+            <div class="settings-sections">
+                <div class="settings-section">
+                    <h3>Account</h3>
+                    <button class="settings-item" data-screen="profile-screen">
+                        <i class="fas fa-user"></i>
+                        <span>Edit Profile</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="settings-item" data-screen="wallet-screen">
+                        <i class="fas fa-wallet"></i>
+                        <span>Wallet Settings</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Preferences</h3>
+                    <button class="settings-item" data-screen="language-screen">
+                        <i class="fas fa-globe"></i>
+                        <span>Language</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="settings-item toggle-item">
+                        <i class="fas fa-bell"></i>
+                        <span>Notifications</span>
+                        <label class="switch">
+                            <input type="checkbox" id="notifications-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item toggle-item">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                        <label class="switch">
+                            <input type="checkbox" id="darkmode-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Support</h3>
+                    <button class="settings-item" data-screen="help-screen">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help & Support</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="settings-item">
+                        <i class="fas fa-star"></i>
+                        <span>Rate App</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item active" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Help Screen -->
+    <div id="help-screen" class="screen">
+        <div class="glass-header">
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <h2>Help & Support</h2>
+        </div>
+        
+        <div class="container">
+            <div class="help-hero">
+                <img src="https://images.pexels.com/photos/3184425/pexels-photo-3184425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=700" 
+                     alt="Help center mobile interface" 
+                     class="help-image"
+                     loading="lazy"
+                     crossorigin="anonymous">
+                <h3>How can we help you?</h3>
+                <p>Find answers to common questions or contact our support team.</p>
+            </div>
+
+            <div class="help-sections">
+                <div class="help-section">
+                    <h3>Quick Help</h3>
+                    <div class="help-items">
+                        <button class="help-item">
+                            <i class="fas fa-question"></i>
+                            <div class="help-content">
+                                <div class="help-title">How do I apply for jobs?</div>
+                                <div class="help-description">Simply browse available jobs and tap "Apply" to send your application.</div>
+                            </div>
+                        </button>
+                        <button class="help-item">
+                            <i class="fas fa-wallet"></i>
+                            <div class="help-content">
+                                <div class="help-title">When do I get paid?</div>
+                                <div class="help-description">Payments are processed within 24 hours after job completion.</div>
+                            </div>
+                        </button>
+                        <button class="help-item">
+                            <i class="fas fa-user-edit"></i>
+                            <div class="help-content">
+                                <div class="help-title">How to update my profile?</div>
+                                <div class="help-description">Go to Settings > Edit Profile to update your information and skills.</div>
+                            </div>
+                        </button>
+                        <button class="help-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="help-content">
+                                <div class="help-title">Is my data safe?</div>
+                                <div class="help-description">Yes, we use bank-level security to protect your personal information.</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="help-section">
+                    <h3>Contact Support</h3>
+                    <div class="contact-options">
+                        <button class="contact-item glass-button">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-info">
+                                <div class="contact-title">Call Us</div>
+                                <div class="contact-subtitle">1800-123-COOLIE</div>
+                            </div>
+                        </button>
+                        <button class="contact-item glass-button">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-info">
+                                <div class="contact-title">Email Support</div>
+                                <div class="contact-subtitle">help@coolie.app</div>
+                            </div>
+                        </button>
+                        <button class="contact-item glass-button">
+                            <i class="fas fa-comments"></i>
+                            <div class="contact-info">
+                                <div class="contact-title">Live Chat</div>
+                                <div class="contact-subtitle">Available 9 AM - 6 PM</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item active" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Post Job Screen -->
     <div id="post-job-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>Post a Job</h2>
         </div>
         
         <div class="container">
-            <form class="glass-form" id="post-job-form">
+            <form class="glass-form" id="post-job-form" role="form" aria-label="Job posting form">
                 <div class="form-group">
                     <label for="job-title">Job Title</label>
-                    <input type="text" id="job-title" class="glass-input" required>
+                    <input type="text" id="job-title" class="glass-input" required aria-required="true">
                 </div>
                 
                 <div class="form-group">
                     <label for="job-description">Description</label>
-                    <textarea id="job-description" class="glass-input" rows="4" required></textarea>
+                    <textarea id="job-description" class="glass-input" rows="4" required aria-required="true"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="job-pay">Pay per Day</label>
-                    <input type="number" id="job-pay" class="glass-input" placeholder="₹" required>
+                    <input type="number" id="job-pay" class="glass-input" placeholder="₹" required aria-required="true">
                 </div>
                 
                 <div class="form-group">
                     <label for="job-location">Location</label>
-                    <input type="text" id="job-location" class="glass-input" required>
+                    <input type="text" id="job-location" class="glass-input" required aria-required="true">
                 </div>
                 
                 <div class="form-group">
                     <label for="job-date">Date/Time</label>
-                    <input type="datetime-local" id="job-date" class="glass-input" required>
+                    <input type="datetime-local" id="job-date" class="glass-input" required aria-required="true">
                 </div>
                 
                 <div class="form-group">
                     <label for="job-phone">Phone Number</label>
-                    <input type="tel" id="job-phone" class="glass-input" required>
+                    <input type="tel" id="job-phone" class="glass-input" required aria-required="true">
                 </div>
                 
-                <button type="submit" class="glass-button primary">Post Job</button>
+                <button type="submit" class="glass-button primary" aria-label="Submit job posting">Post Job</button>
             </form>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- My Jobs Screen -->
     <div id="my-jobs-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>My Jobs</h2>
         </div>
         
         <div class="container">
-            <div class="glass-card">
-                <h3>Applied Jobs</h3>
-                <p>You have applied to 3 jobs this week</p>
+            <div class="jobs-overview">
+                <div class="glass-card">
+                    <div class="job-stat">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-content">
+                            <h3>Applied Jobs</h3>
+                            <p class="stat-number">3</p>
+                            <p class="stat-subtitle">This week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <div class="job-stat">
+                        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="stat-content">
+                            <h3>Completed Jobs</h3>
+                            <p class="stat-number">23</p>
+                            <p class="stat-subtitle">All time</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card">
-                <h3>Completed Jobs</h3>
-                <p>23 jobs completed successfully</p>
+            
+            <div class="job-history" id="job-history">
+                <!-- Job history will be populated by JavaScript -->
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Profile Screen -->
     <div id="profile-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>My Profile</h2>
         </div>
         
@@ -160,12 +589,12 @@
                     <div class="profile-photo">
                         <i class="fas fa-user"></i>
                     </div>
-                    <button class="glass-button">Upload Photo</button>
+                    <button class="glass-button" aria-label="Upload profile photo">Upload Photo</button>
                 </div>
                 
                 <div class="voice-intro-section">
                     <label>Voice Introduction</label>
-                    <button class="glass-button voice-record-btn" id="voice-record">
+                    <button class="glass-button voice-record-btn" id="voice-record" aria-label="Record voice introduction">
                         <i class="fas fa-microphone"></i>
                         Record Voice Intro
                     </button>
@@ -173,7 +602,7 @@
                 
                 <div class="skills-section">
                     <label>Your Skills</label>
-                    <div class="skills-grid" id="skills-grid">
+                    <div class="skills-grid" id="skills-grid" role="group" aria-label="Select your skills">
                         <!-- Skills will be populated by JavaScript -->
                     </div>
                 </div>
@@ -188,17 +617,42 @@
                     </label>
                 </div>
                 
-                <button class="glass-button primary">Save Changes</button>
+                <button class="glass-button primary" aria-label="Save profile changes">Save Changes</button>
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Wallet Screen -->
     <div id="wallet-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>Wallet</h2>
         </div>
         
@@ -226,29 +680,77 @@
                     <input type="text" id="upi-id" class="glass-input" value="coolie@ybl">
                 </div>
                 
-                <button class="glass-button primary">Send Payment Request</button>
+                <button class="glass-button primary" aria-label="Send payment request">Send Payment Request</button>
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Language Screen -->
     <div id="language-screen" class="screen">
         <div class="glass-header">
-            <button class="back-btn" data-screen="home-screen">
-                <i class="fas fa-arrow-left"></i>
-            </button>
+            <div class="header-back">
+                <button class="back-btn" aria-label="Go back">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
             <h2>Change Language</h2>
         </div>
         
         <div class="container">
-            <div class="language-options" id="language-options">
+            <div class="language-options" id="language-options" role="radiogroup" aria-label="Select language">
                 <!-- Language options will be populated by JavaScript -->
             </div>
         </div>
+
+        <nav id="bottom-nav" class="bottom-nav nav-fixed" aria-label="Main navigation">
+            <button class="nav-item" data-screen="home-screen" aria-label="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" data-screen="find-work-screen" aria-label="Find work">
+                <i class="fas fa-search"></i>
+                <span>Jobs</span>
+            </button>
+            <button class="nav-item nav-landing-shortcut" id="landing-shortcut" aria-label="Back to Landing (long press)">
+                <i class="fas fa-house-user"></i>
+                <span class="nav-tooltip hidden">Back to Landing</span>
+            </button>
+            <button class="nav-item" data-screen="settings-screen" aria-label="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="nav-item" data-screen="help-screen" aria-label="Help and support">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </button>
+        </nav>
     </div>
 
     <!-- Loading Overlay -->
-    <div id="loading-overlay" class="loading-overlay hidden">
+    <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true">
         <div class="glass-card loading-card">
             <div class="loading-spinner"></div>
             <p>Loading...</p>
@@ -256,14 +758,14 @@
     </div>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="modal hidden">
+    <div id="success-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-content glass-card">
             <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
             <h3 id="success-title">Success!</h3>
             <p id="success-message">Operation completed successfully</p>
-            <button class="glass-button primary" id="success-close">OK</button>
+            <button class="glass-button primary" id="success-close" aria-label="Close success message">OK</button>
         </div>
     </div>
 
